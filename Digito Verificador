@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main (){
+    setlocale(LC_ALL, "Portuguese");
+    int numeroConta, digito1, digito2, digito3, digito4, soma4Digitos, mult4Digitos, multMenosSoma, digitoVerificador;
+
+    printf("\t\t\tBem Vindo Ao Nosso Software !");
+    printf("\n\nDigite O Número Da Sua Conta Bancária (Deve Haver 4 Digitor) --> ");
+    scanf("%d", &numeroConta);
+
+    digito1 = numeroConta / 1000;
+    digito2 = (numeroConta % 1000) / 100;
+    digito3 = (numeroConta % 100) / 10;
+    digito4 = numeroConta % 10;
+    soma4Digitos = digito1 + digito2 + digito3 + digito4;
+    mult4Digitos = digito1 * digito2 * digito3 * digito4;
+    multMenosSoma = mult4Digitos - soma4Digitos;
+    digitoVerificador = multMenosSoma % 9;
+
+    printf("\n\nO Digito Verificador Será %d", digitoVerificador);
+    printf("\n\n\n\t\t\tObrigado Por Utilizar Nosso Software !");
+}
