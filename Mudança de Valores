@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+    int a, b, temp;
+
+    printf("\t\t\tSeja Bem Vindo Ao Nosso Software !");
+    printf("\n\nDigite Um Número Inteiro Qualquer --> ");
+    scanf("%d", &a);
+    printf("\nDigite Um Novo Número Inteiro Qualquer --> ");
+    scanf("%d", &b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("\n\nO Valor De A é %d", a);
+    printf("\nO Valor de B é %d", b);
+    printf("\n\n\n\t\t\tObrigado Por Utilizar Nosso Software !");
+}
